@@ -1,68 +1,62 @@
-// const age = "65" // prompt
-// const km = "236" // prompr
-// const priceForKm = 0.21;
-// const discountJunior = 0.2;
-// const discountSenior = 0.4;
+/* 
+Scrivere (come ieri) un programma che chieda all’utente:
+- Il numero di chilometri da percorrere
+- Età del passeggero
+Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
+- il prezzo del biglietto è definito in base ai km (0.21 € al km)
+- va applicato uno sconto del 20% per i minorenni
+- va applicato uno sconto del 40% per gli over 65.
+*/
 
-// let msg, totalPrice, discountPrice;
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// totalPrice = km * priceForKm;
+// km percorsi => input
 
-// msg = `Il prezzo del biglietto è di € ${totalPrice.toFixed(2)}.`;
+// età => input select
 
-// // anche se è una stringa lo vede come numero
-// if(age < 18){
-//   //discountPrice = totalPrice - totalPrice * discountJunior;
-//   discountPrice = totalPrice * (1 - discountJunior);
-//   msg += `
-//     <br>
-//     Essendo minorenne hai lo sconto del ${discountJunior * 100}% quindi paghi solo € ${discountPrice.toFixed(2)}!
-//   `;
-// }else if(age >= 65){
-//   discountPrice = totalPrice * (1 - discountSenior);
-//   msg += `
-//     <br>
-//     Essendo over 65 hai lo sconto del ${discountSenior * 100}% quindi paghi solo € ${discountPrice.toFixed(2)}!
-//   `;
-// }
+// dato fisso €/km 0.21
 
+// sconto minorenni 0.20
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// sconto over65 0.40
 
-// const nameUtente che sarà input id=> name-utente
-const nameUtente = document.getElementById('name-utente').value;
-
-// const km da fare che sarà input id=> km
-const kmRequest = document.getElementById('km').value;
-
-//Fascia età per sconto
-
-let age; 
-
-
-// const prezzo per km dato fisso
+// * dati partenza
 const priceForKm = 0.21;
-
-// const sconto junior dato fisso
 const discountJunior = 0.2;
-
-// const sconto senior dato fisso
 const discountSenior = 0.4;
 
-// var per calcolo dello sconto esercizio di ieri (vedi sopra)
-/*let totalPrice;
+const nameUtente = document.getElementById('name-utente').value;
+const km = document.getElementById('km').value;
 
-totalPrice = km * priceForKm;
+let age;
 
-if(age < 18){
-  discountPrice = totalPrice * (1 - discountJunior);
-}
-else if(age >= 65){
-  discountPrice = totalPrice * (1 - discountSenior);
-}*/
 
-//! console
 
-console.log(nameUtente);
-console.log(kmRequest);
-console.log(age);
+// * Output
+
+// al click su genera va stampato in pagina VALUE NOME COGNOME e TOTALE BIGLIETTO
+
+
+
+
+
+
+
+
+// RESET SU TASTO ANNULA
+
+const reset = document.getElementById('annulla');
+
+reset.addEventListener('click', function(){
+  document.getElementById('name-utente').value = '';
+  document.getElementById('km').value = '';
+  document.getElementById('selection').value = '';
+});
+
+
+
+
+// ! CONSOLE
+
+console.log('nameUtente------->', nameUtente);
+console.log('km------->', km);
