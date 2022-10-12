@@ -26,15 +26,43 @@
 //   `;
 // }
 
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// const nameUtente che sarà input id=> name-utente
+const nameUtente = document.getElementById('name-utente').value;
+
+// const km da fare che sarà input id=> km
+const kmRequest = document.getElementById('km').value;
+
+//Fascia età per sconto
+
+let age; 
+
+
+// const prezzo per km dato fisso
 const priceForKm = 0.21;
+
+// const sconto junior dato fisso
 const discountJunior = 0.2;
+
+// const sconto senior dato fisso
 const discountSenior = 0.4;
 
-const nameUtente = document.getElementById('name-utente').value;
-const km = document.getElementById('km').value;
+// var per calcolo dello sconto esercizio di ieri (vedi sopra)
+/*let totalPrice;
 
-const age = document.querySelector('option').value;
+totalPrice = km * priceForKm;
+
+if(age < 18){
+  discountPrice = totalPrice * (1 - discountJunior);
+}
+else if(age >= 65){
+  discountPrice = totalPrice * (1 - discountSenior);
+}*/
+
+//! console
 
 console.log(nameUtente);
-console.log(km);
+console.log(kmRequest);
 console.log(age);
