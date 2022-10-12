@@ -1,51 +1,52 @@
-/* 
-Scrivere (come ieri) un programma che chieda all’utente:
-- Il numero di chilometri da percorrere
-- Età del passeggero
-Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
-- il prezzo del biglietto è definito in base ai km (0.21 € al km)
-- va applicato uno sconto del 20% per i minorenni
-- va applicato uno sconto del 40% per gli over 65.
-*/
-
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-// km percorsi => input
-
-// età => input select
-
-// dato fisso €/km 0.21
-
-// sconto minorenni 0.20
-
-// sconto over65 0.40
-
-// * dati partenza
-const priceForKm = 0.21;
+const priceKm = 0.21;
 const discountJunior = 0.2;
 const discountSenior = 0.4;
 
-const nameUtente = document.getElementById('name-utente').value;
-const km = document.getElementById('km').value;
+// Mappato gli elementi dell'HTML con delle costanti JS
+const inputUtente = document.querySelector('#name-utente');
+const inputKm = document.querySelector('#km');
+const inputSelection = document.querySelector('#selection');
+const btnGenera = document.querySelector('#genera');
+const outputName = document.querySelector('#output-name');
+const outputTicket = document.querySelector('#output-discount')
+const outputPriceTicket = document.querySelector('#output-price-ticket');
+let totalPrice, voyagePrice;
 
-let age;
-let totalPrice;
+
+// Gestiamo l'evento click sul pulsante Genera
+btnGenera.addEventListener('click', function() {
+
+  // ogni volta che clicchiamo, esegue queste istruzioni
+  const valUtente = inputUtente.value;
+  const valKm = inputKm.value;
+  const valSelection = inputSelection.value;
+
+  let voyagePrice = valKm * priceKm
+
+  // il calcolo di ieri
+
+  if(valSelection === 'Under18'){
+    totalPrice = voyagePrice * (1 - discountJunior);
+  }
+  else if(valSelection === 'Over65'){
+    totalPrice = voyagePrice * (1 - discountSenior);
+  }
+  else{
+    totalPrice = voyagePrice
+  };
 
 
 
-
-// * Output
-
-// al click su genera va stampato in pagina VALUE NOME COGNOME e TOTALE BIGLIETTO
-
-// STAMPA BIGLIETTO 
-
-const stamp = document.getElementById('genera');
-
-stamp.addEventListener('click', function(){
-  document.getElementById('output-name').innerHTML = document.getElementById('name-utente').value;
-  document.getElementById('output-price-ticket').innerHTML = totalPrice;
-})
+  console.log('utente', valUtente);
+  console.log('km', valKm);
+  console.log('eta', valSelection);
+  console.log('prezzo totale biglietto', totalPrice);
+  console.log('voyagePrice', voyagePrice);
+  
+  outputName.innerText = valUtente;
+  outputTicket.innerText = valSelection;
+  outputPriceTicket.innerText = '€ '+ totalPrice.toFixed(2);
+});
 
 
 
@@ -62,13 +63,3 @@ reset.addEventListener('click', function(){
   document.getElementById('km').value = '';
   document.getElementById('selection').value = '';
 });
-
-
-
-
-// ! CONSOLE
-
-console.log('nameUtente------->', nameUtente);
-console.log('km------->', km);
-console.log('age------->', age);
-console.log('totalPrice------->', totalPrice);
