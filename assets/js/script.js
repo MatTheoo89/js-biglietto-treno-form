@@ -29,6 +29,8 @@ const nameUtente = document.getElementById('name-utente').value;
 const km = document.getElementById('km').value;
 
 let age;
+let totalPrice;
+
 
 
 
@@ -36,6 +38,14 @@ let age;
 
 // al click su genera va stampato in pagina VALUE NOME COGNOME e TOTALE BIGLIETTO
 
+// STAMPA BIGLIETTO 
+
+const stamp = document.getElementById('genera');
+
+stamp.addEventListener('click', function(){
+  document.getElementById('output-name').innerHTML = document.getElementById('name-utente').value;
+  document.getElementById('output-price-ticket').innerHTML = totalPrice;
+})
 
 
 
@@ -60,3 +70,5 @@ reset.addEventListener('click', function(){
 
 console.log('nameUtente------->', nameUtente);
 console.log('km------->', km);
+console.log('age------->', age);
+console.log('totalPrice------->', totalPrice);
