@@ -1,0 +1,80 @@
+body {
+  background-color: #7e0469;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*  ! MAIN inizio  */
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.container-input,
+.container-ticket {
+  width: 80%;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
+}
+
+.top {
+  display: flex;
+}
+
+.bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.box {
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+.box h4 {
+  font-size: 1.2rem;
+  color: #be009f;
+}
+
+.box input,
+.box select {
+  border: 1px solid #be009f;
+  border-radius: 5px;
+  padding: 5px 30px;
+}
+
+button {
+  color: #be009f;
+  font-weight: bold;
+  padding: 5px 15px;
+  margin-right: 20px;
+}
+
+.container {
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.box-grey {
+  background-color: grey;
+  width: 25%;
+  padding: 15px 15px;
+}
+
+.box-ticket {
+  width: calc(75% / 4);
+  padding: 0 15px;
+}
+
+/*  ! MAIN fine */
+
+
+/*  ! FOOTER inizio  */
+
+/*  ! FOOTER fine */

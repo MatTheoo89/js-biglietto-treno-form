@@ -1,0 +1,80 @@
+/******************************  RESET GENERALI  ******************************/
+/* ! da mettere se lavori SENZA bootstrap*/
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+
+
+img {
+  max-width: 100%;
+  /*img sempre al 100%*/
+}
+
+ol,
+ul {
+  list-style: none;
+  /*toglie il pallino a TUTTE le liste*/
+}
+
+a {
+  text-decoration: none;
+  /*toglie il sottolineato a TUTTI i link*/
+}
+
+
+/******************************  UTILITY  ******************************/
+
+/**********  DEBUG  **********/
+
+.debug-0 {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgb(126, 126, 126);
+}
+
+.debug-1 {
+  background-color: rgba(255, 0, 0, .25);
+  border: 1px solid red;
+}
+
+.debug-2 {
+  background-color: rgba(0, 255, 0, .25);
+  border: 1px solid greenyellow;
+}
+
+.debug-3 {
+  background-color: rgba(0, 0, 255, .25);
+  border: 1px solid aqua;
+}
+
+
+/******************************  COMPONENTS  ******************************/
+
+/**********  CONTAINER  **********/
+
+.mbc-container-100 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mbc-container-95 {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.mbc-container-90 {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.mbc-container-85 {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.mbc-container-80 {
+  width: 80%;
+  margin: 0 auto;
+}

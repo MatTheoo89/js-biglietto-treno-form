@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+    <!-- ! FOGLI STYLE PERSONALI E MEDIA QUERY -->
+    <link rel="stylesheet" href="assets/css/reset-utility-var.css">
+    <link rel="stylesheet" href="assets/css/master-style.css">
+
+    
+    <!-- ! TITOLO PAGE -->
+    <title>calcolo del prezzo del biglietto del treno</title>
+  
+  </head>
+
+  <body>
+      <!-- ! MAIN inizio -->
+      <main>
+        
+      <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+      <div class="container-input debug-1">
+
+        <div class="top">
+          
+          <div class="box">
+          <h4>Nome e cognome</h4>
+          <input type="text" placeholder="Nome e cognome" value="">
+          </div>
+        
+          <div class="box">
+          <h4>Km da percorrere</h4>
+          <input type="text" placeholder="Inserisci i Km" value="">
+          </div>
+        
+          <div class="box">
+            <h4>Fascia d'età</h4>
+            <select>
+              <option value='Maggiorenne'>Maggiorenne</option>
+              <option value='Minorenne'>Minorenne</option>
+              <option value='Over65'>Over65</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <button id="genera">Genera</button>
+          <button id="annulla">Annulla</button>
+        </div>
+
+      </div>
+      
+      <h1>IL TUO BIGLIETTO</h1>
+      <div class="container-ticket debug-2">
+
+        <h3>DETTAGLIO PASSEGGERI</h3>
+        <div class="container">
+
+          <div class="box-grey">
+            <h3>NOME PASSEGGERO</h3>
+            <h5>Jon Snow</h5>
+          </div>
+          <div class="box-ticket">
+            <h3>Offerta</h3>
+            <h5>Biglietto std</h5>
+          </div>
+          <div class="box-ticket">
+            <h3>Carrozza</h3>
+            <h5>5</h5>
+          </div>
+          <div class="box-ticket">
+            <h3>Codice CP</h3>
+            <h5>92911 std</h5>
+          </div>
+          <div class="box-ticket">
+            <h3>Costo biglietto</h3>
+            <h5>2.10€</h5>
+          </div>
+        </div>
+
+        
+
+      </div>
+
+    </main>
+    <!-- ! MAIN fine-->
+
+
+    <!-- ! LINK JAVASCRIPT  -->
+    <script src="assets/js/script.js"></script>
+  </body>
+
+</html>
